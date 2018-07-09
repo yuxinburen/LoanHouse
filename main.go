@@ -6,9 +6,14 @@ import (
 	"strings"
 	"net/http"
 	"github.com/astaxie/beego/context"
+	_ "LoanHouse/models"
 )
 
 func main() {
+
+	//1.再main中集成session环境  2.在配置文件中设置session
+	beego.BConfig.WebConfig.Session.SessionOn = true
+
 	ignoreStaticPath()
 	beego.Run()
 }
