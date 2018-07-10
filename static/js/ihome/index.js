@@ -61,7 +61,7 @@ $(document).ready(function(){
     // 检查用户的登录状态
     $.get("/api/v1.0/session", function(resp) {
         if ("0" == resp.errno) {
-            $(".top-bar>.user-info>.user-name").html(resp.data.name);
+            $(".top-bar>.user-info>.user-name").html(resp.data.Name);
             $(".top-bar>.user-info").show();
         } else {
             $(".top-bar>.register-login").show();
